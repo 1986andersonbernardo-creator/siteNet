@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>+Net - Muito mais internet pra você</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- CSS EXTERNO -->
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+<link rel="manifest" href="imagens/site.webmanifest">
+
+</head>
+<body>
+
+<header>
+  <h1>+Net</h1>
+  <nav>
+    <a href="#planos">Planos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#cobertura">Cobertura</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section class="banner"></section>
+
+<section class="planos" id="planos">
+  <h2>Nossos Planos</h2>
+
+  <div class="beneficios-planos">
+    <div class="beneficio-planos">
+      <img src="imagens/wifi.png" alt="Wi-Fi Incluso">
+      <span>Wi-Fi Incluso</span>
+    </div>
+
+    <div class="beneficio-planos">
+      <img src="imagens/rocket.png" alt="Ultra Velocidade">
+      <span>Ultra Velocidade</span>
+    </div>
+
+    <div class="beneficio-planos">
+      <img src="imagens/tool.png" alt="Instalação Grátis">
+      <span>Instalação Grátis</span>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>100 Mega</h3>
+      <p>R$ 59,90/mês</p>
+    </div>
+
+    <div class="card">
+      <h3>300 Mega</h3>
+      <p>R$ 69,90/mês</p>
+    </div>
+
+    <div class="card">
+      <h3>500 Mega</h3>
+      <p>R$ 79,90/mês</p>
+    </div>
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="sobre-img">
+    <img src="imagens/tecnico.jpg" alt="Técnico">
+  </div>
+
+  <div class="sobre-text">
+    <h2>Sobre a +Net</h2>
+    <p>
+      A +Net oferece internet de alta velocidade e confiabilidade, com tecnologia de ponta e atendimento personalizado. 
+      Nossa missão é conectar você ao que realmente importa, com qualidade e estabilidade.
+    </p>
+  </div>
+</section>
+
+<section class="cobertura" id="cobertura">
+  <h2>Área de Atendimento</h2>
+
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15801.444217112958!2d-34.88!3d-8.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</section>
+
+<section class="contato" id="contato">
+  <h2>Contato</h2>
+
+  <p>
+    <img src="imagens/email.png" class="icon">
+    <a href="mailto:maisnetpe@gmail.com">maisnetpe@gmail.com</a>
+  </p>
+
+  <p>
+    <img src="imagens/instagram.png" class="icon">
+    <a href="https://www.instagram.com/maisnet_pe/" target="_blank">@maisnet_pe</a>
+  </p>
+
+  <p>
+    <img src="imagens/whatsapp.png" class="icon">
+    <a href="https://wa.me/5581891258210" target="_blank">(81) 89125-8210</a>
+  </p>
+</section>
+
+<footer>
+  © 2026 +Net - Muito mais internet pra você
+</footer>
+
+<!-- Música de fundo -->
+<audio id="musicaFundo" loop>
+  <source src="imagens/audio/gta.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const musica = document.getElementById('musicaFundo');
+  musica.volume = 0.4;
+
+  function iniciarAudio() {
+    musica.play().catch(() => {
+      console.log("Aguardando interação...");
+    });
+  }
+
+  window.addEventListener('load', iniciarAudio);
+
+  document.body.addEventListener('click', function() {
+    iniciarAudio();
+  }, { once: true });
+</script>
+
+</body>
+</html>
