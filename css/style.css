@@ -1,48 +1,330 @@
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
-body { background:#120038; color:#fff; overflow-x:hidden; }
+* { 
+  margin:0; 
+  padding:0; 
+  box-sizing:border-box; 
+  font-family:'Poppins', sans-serif; 
+}
 
-header { background:#6a1b9a; color:#fff; padding:10px 40px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100; }
-header h1 { font-size:1.5rem; }
-nav a { color:#fff; text-decoration:none; margin-left:25px; font-weight:600; transition:0.3s; }
-nav a:hover { color:#ba68c8; }
+body { 
+  background:#120038; 
+  color:#fff; 
+  overflow-x:hidden; 
+}
 
-.banner { position: relative; height:700px; overflow: hidden; background-image: url('../imagens/banner.png'); background-size: cover; background-position: center; animation: bannerEffect 12s ease-in-out infinite alternate; }
-@keyframes bannerEffect { 0% { transform: scale(1); filter: brightness(1); } 50% { transform: scale(1.05); filter: brightness(1.1); } 100% { transform: scale(1); filter: brightness(1); } }
+/* HEADER */
+header { 
+  background:#6a1b9a; 
+  color:#fff; 
+  padding:10px 20px; 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  position:sticky; 
+  top:0; 
+  z-index:100; 
+  flex-wrap:wrap;
+}
 
-.planos { padding:40px 20px 80px 20px; text-align:center; background:linear-gradient(180deg,#4a148c,#6a1b9a); }
-.planos h2 { font-size:2.5rem; margin-bottom:30px; color:#e1bee7; }
+header h1 { 
+  font-size:1.5rem; 
+}
 
-.beneficios-planos { display:flex; justify-content:center; gap:25px; flex-wrap:wrap; margin-bottom:40px; }
-.beneficio-planos { background: linear-gradient(135deg, #7b1fa2, #4a148c); padding:15px 20px; border-radius:50px; display:flex; flex-direction:column; align-items:center; text-align:center; color:#fff; font-weight:300; box-shadow: 0 4px 15px rgba(0,0,0,0.4); transition: transform 0.3s, box-shadow 0.3s; }
-.beneficio-planos:hover { transform: translateY(-5px) scale(1.1); box-shadow: 0 6px 20px rgba(123,31,162,0.6); }
-.beneficio-planos img { width:50px; height:50px; margin-bottom:8px; filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5)); } 
-.beneficio-planos span { font-size:1rem; }
+nav { 
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:center; 
+}
 
-.cards { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
-.card { background:rgba(255,255,255,0.1); padding:20px; border-radius:15px; min-width:250px; transition:0.3s; box-shadow:0 5px 15px rgba(0,0,0,0.3); }
-.card:hover { background:rgba(255,255,255,0.2); transform:translateY(-5px); }
-.card h3 { font-size:1.8rem; margin-bottom:15px; color:#e1bee7; }
-.card p { margin:3px 0; font-size:1rem; }
+nav a { 
+  color:#fff; 
+  text-decoration:none; 
+  margin:8px 12px; 
+  font-weight:600; 
+  transition:0.3s; 
+}
 
-.sobre { padding:80px 20px; display:flex; justify-content:center; align-items:center; gap:50px; flex-wrap:wrap; background:#1a003c; }
-.sobre-img img { width:350px; max-width:90%; border-radius:15px; box-shadow:0 5px 25px rgba(0,0,0,0.6); transition: transform 0.3s; }
-.sobre-text { flex:1; max-width:600px; }
-.sobre-text h2 { font-size:2.2rem; margin-bottom:20px; color:#e1bee7; }
-.sobre-text p { line-height:1.6; font-size:1.1rem; color:#f1f1f1; }
+nav a:hover { 
+  color:#ba68c8; 
+}
 
-.cobertura { padding:40px 20px; text-align:center; background:#120038; }
-.cobertura iframe { width:60%; max-width:500px; height:250px; border-radius:15px; border:none; }
+/* BANNER */
+.banner { 
+  position: relative; 
+  height:600px; 
+  overflow: hidden; 
+  background-image: url('../imagens/banner.png'); 
+  background-size: cover; 
+  background-position: center; 
+  animation: bannerEffect 12s ease-in-out infinite alternate; 
+}
 
-.contato { padding:20px; background:#6a1b9a; text-align:center; }
-.contato h2 { font-size:2.2rem; margin-bottom:30px; color:#e1bee7; }
-.contato p { margin:12px 0; font-size:1.1rem; display:flex; justify-content:center; align-items:center; gap:8px; }
-.contato a { color:#e1bee7; text-decoration:none; }
-.contato .icon { width:28px; height:28px; }
+@keyframes bannerEffect { 
+  0% { transform: scale(1); filter: brightness(1); } 
+  50% { transform: scale(1.05); filter: brightness(1.1); } 
+  100% { transform: scale(1); filter: brightness(1); } 
+}
 
-footer { padding:25px; text-align:center; background:#4a148c; font-size:1rem; }
+/* PLANOS */
+.planos { 
+  padding:40px 20px 80px 20px; 
+  text-align:center; 
+  background:linear-gradient(180deg,#4a148c,#6a1b9a); 
+}
+
+.planos h2 { 
+  font-size:2.5rem; 
+  margin-bottom:30px; 
+  color:#e1bee7; 
+}
+
+/* BENEFÍCIOS */
+.beneficios-planos { 
+  display:flex; 
+  justify-content:center; 
+  gap:25px; 
+  flex-wrap:wrap; 
+  margin-bottom:40px; 
+}
+
+.beneficio-planos { 
+  background: linear-gradient(135deg, #7b1fa2, #4a148c); 
+  padding:15px 20px; 
+  border-radius:50px; 
+  display:flex; 
+  flex-direction:column; 
+  align-items:center; 
+  text-align:center; 
+  color:#fff; 
+  font-weight:300; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
+  transition: transform 0.3s, box-shadow 0.3s; 
+  min-width:120px;
+}
+
+.beneficio-planos:hover { 
+  transform: translateY(-5px) scale(1.1); 
+  box-shadow: 0 6px 20px rgba(123,31,162,0.6); 
+}
+
+.beneficio-planos img { 
+  width:50px; 
+  height:50px; 
+  margin-bottom:8px; 
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.5)); 
+}
+
+.beneficio-planos span { 
+  font-size:1rem; 
+}
+
+/* CARDS */
+.cards { 
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:center; 
+  gap:30px; 
+}
+
+.card { 
+  background:rgba(255,255,255,0.1); 
+  padding:20px; 
+  border-radius:15px; 
+  width:100%; 
+  max-width:280px; 
+  transition:0.3s; 
+  box-shadow:0 5px 15px rgba(0,0,0,0.3); 
+}
+
+.card:hover { 
+  background:rgba(255,255,255,0.2); 
+  transform:translateY(-5px); 
+}
+
+.card h3 { 
+  font-size:1.8rem; 
+  margin-bottom:15px; 
+  color:#e1bee7; 
+}
+
+.card p { 
+  margin:3px 0; 
+  font-size:1rem; 
+}
+
+/* SOBRE */
+.sobre { 
+  padding:80px 20px; 
+  display:flex; 
+  justify-content:center; 
+  align-items:center; 
+  gap:50px; 
+  flex-wrap:wrap; 
+  background:#1a003c; 
+}
+
+.sobre-img img { 
+  width:350px; 
+  max-width:100%; 
+  border-radius:15px; 
+  box-shadow:0 5px 25px rgba(0,0,0,0.6); 
+}
+
+.sobre-text { 
+  flex:1; 
+  max-width:600px; 
+}
+
+.sobre-text h2 { 
+  font-size:2.2rem; 
+  margin-bottom:20px; 
+  color:#e1bee7; 
+}
+
+.sobre-text p { 
+  line-height:1.6; 
+  font-size:1.1rem; 
+  color:#f1f1f1; 
+}
+
+/* COBERTURA */
+.cobertura { 
+  padding:40px 20px; 
+  text-align:center; 
+  background:#120038; 
+}
+
+.cobertura iframe { 
+  width:100%; 
+  max-width:500px; 
+  height:250px; 
+  border-radius:15px; 
+  border:none; 
+}
+
+/* CONTATO */
+.contato { 
+  padding:20px; 
+  background:#6a1b9a; 
+  text-align:center; 
+}
+
+.contato h2 { 
+  font-size:2.2rem; 
+  margin-bottom:30px; 
+  color:#e1bee7; 
+}
+
+.contato p { 
+  margin:12px 0; 
+  font-size:1.1rem; 
+  display:flex; 
+  justify-content:center; 
+  align-items:center; 
+  gap:8px; 
+}
+
+.contato a { 
+  color:#e1bee7; 
+  text-decoration:none; 
+}
+
+.contato .icon { 
+  width:28px; 
+  height:28px; 
+}
+
+/* FOOTER */
+footer { 
+  padding:25px; 
+  text-align:center; 
+  background:#4a148c; 
+  font-size:1rem; 
+}
+
+/* ========================= */
+/* 📱 RESPONSIVIDADE */
+/* ========================= */
 
 @media(max-width:768px){ 
-  .sobre { flex-direction:column; text-align:center; } 
-  .cards { flex-direction:column; } 
-  .cobertura iframe { width:100%; } 
+
+  header {
+    flex-direction:column;
+    text-align:center;
+  }
+
+  nav {
+    margin-top:10px;
+  }
+
+  .banner {
+    height:300px;
+    animation:none;
+  }
+
+  .cards {
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .card {
+    width:90%;
+  }
+
+  .sobre { 
+    flex-direction:column; 
+    text-align:center; 
+    padding:50px 20px;
+  }
+
+  .sobre-text h2 {
+    font-size:1.8rem;
+  }
+
+  .sobre-text p {
+    font-size:1rem;
+  }
+
+  .contato p {
+    flex-direction:column;
+  }
+
+  .cobertura iframe { 
+    width:100%; 
+  } 
+}
+
+@media(max-width:480px){
+
+  header h1 {
+    font-size:1.2rem;
+  }
+
+  nav a {
+    font-size:12px;
+  }
+
+  .banner {
+    height:200px;
+  }
+
+  .planos h2 {
+    font-size:1.6rem;
+  }
+
+  .beneficio-planos img {
+    width:40px;
+    height:40px;
+  }
+
+  .card h3 {
+    font-size:1.5rem;
+  }
+
+  .card p {
+    font-size:0.9rem;
+  }
+
+  footer {
+    font-size:0.9rem;
+  }
 }
